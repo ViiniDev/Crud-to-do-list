@@ -10,7 +10,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @Service
-public class TodoServive {
+public class TodoService {
 
     private TodoRepository todoRepository;
 

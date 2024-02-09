@@ -1,7 +1,7 @@
 package com.desafio.todolist.todolist.controller;
 
 import com.desafio.todolist.todolist.entity.Todo;
-import com.desafio.todolist.todolist.service.TodoServive;
+import com.desafio.todolist.todolist.service.TodoService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/todos")
 public class TodoController {
-    private TodoServive todoServive;
+    private TodoService todoServive;
     @PostMapping
     List<Todo> create(@RequestBody Todo todo){
         return todoServive.create(todo);
