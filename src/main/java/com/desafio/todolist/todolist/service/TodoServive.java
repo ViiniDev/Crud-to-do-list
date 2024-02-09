@@ -28,7 +28,7 @@ public class TodoServive {
         todoRepository.save(todo);
         return list();
     }
-    public List<Todo> deleted(Long id){
+    public List<Todo> delete(Long id){
         todoRepository.deleteById(id);
         return list();
     }
