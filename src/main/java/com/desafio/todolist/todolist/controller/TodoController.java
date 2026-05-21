@@ -10,22 +10,25 @@ import java.util.List;
 @RestController
 @RequestMapping("/todos")
 public class TodoController {
-    private TodoService todoServive;
+    private TodoService todoService;
+
     @PostMapping
     List<Todo> create(@RequestBody Todo todo){
-        return todoServive.create(todo);
+        return todoService.create(todo);
     }
+
     @GetMapping
     List<Todo> list(){
-        return todoServive.list();
+        return todoService.list();
     }
+
     @PutMapping
     List<Todo> update(@RequestBody Todo todo){
-        return todoServive.update(todo);
+        return todoService.update(todo);
     }
-    @DeleteMapping("{id}")
 
+    @DeleteMapping("{id}")
     List<Todo> delete(@PathVariable("id") Long id){
-        return todoServive.delete(id);
+        return todoService.delete(id);
     }
 }
